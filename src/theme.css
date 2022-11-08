@@ -1,0 +1,106 @@
+body {
+  --font-family: "Fira Sans", sans-serif;
+  --text-main-color: #999;
+  --text-secondary-color: #fff;
+  --card-bg-color: #222;
+  --card-border-color: #3b4040;
+  --card-font-size: 1.25rem;
+  --border-radius: 5px;
+  --bg-image: repeating-linear-gradient(
+    45deg,
+    #000,
+    #030303 1px,
+    #111 1px,
+    #111 5px
+  );
+}
+
+.theme-black {
+  width: 100%;
+  height: 100vh;
+  background-image: var(--bg-image);
+  font-family: var(--font-family);
+}
+
+.theme-black .appCard {
+  font-size: var(--card-font-size);
+}
+
+.theme-black .appCard .header a {
+  color: var(--text-main-color);
+}
+
+.theme-black .appCard .header .buttonBar button {
+  color: var(--text-main-color);
+}
+
+.theme-black .appCard .header .buttonBar button:hover {
+  color: var(--text-secondary-color);
+}
+
+.theme-black .appCard .pageTabs .tab {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  border-bottom: 0;
+  background-color: #191919;
+}
+
+.theme-black .appCard .pageTabs .tab i {
+  color: var(--card-border-color);
+  font-size: 6px;
+}
+
+.theme-black .appCard .pageTabs .tab.selected {
+  background-color: var(--card-bg-color);
+}
+
+.theme-black .appCard .pageTabs .tab.selected i {
+  color: var(--text-main-color);
+}
+
+.theme-black .appCard .pageTabs :not(.selected) {
+  border: 1px solid var(--card-bg-color);
+}
+
+.theme-black .pageCard {
+  background: var(--card-bg-color);
+  border: 1px solid var(--card-border-color);
+  position: relative;
+  text-decoration: none;
+}
+
+.theme-black .pageCard .content {
+  color: var(--text-main-color);
+}
+
+.theme-black .pageCard .content .title {
+  color: var(--text-secondary-color);
+}
+
+.theme-black .pageCard .content .description {
+  height: 3.5rem;
+}
+
+.theme-black .appCard .wallets {
+  color: var(--text-main-color);
+  border-left: 0;
+  border-top-right-radius: calc(2 * var(--border-radius));
+  border-bottom-right-radius: calc(2 * var(--border-radius));
+  background-color: #333;
+  position: absolute;
+  left: -1px;
+  bottom: 1.5rem;
+  padding-right: 1rem;
+  flex: inherit;
+  right: 3rem;
+}
+
+.theme-black .appCard .wallets .label {
+  color: var(--text-main-color);
+  /* border-right: 1px solid var(--card-border-color); */
+  padding: 1rem;
+}
+
+.theme-black .appCard .wallets .value {
+  margin: 1rem;
+}
